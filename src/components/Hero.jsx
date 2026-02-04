@@ -33,7 +33,7 @@ const Hero = () => {
                         ease: [0.22, 1, 0.36, 1], // Closest to power2.out
                         delay: 0.4
                     }}
-                    className="text-[25vw] md:text-[15vw] font-black text-black-text tracking-tighter pointer-events-none select-none uppercase leading-none luxury-text -mt-50"
+                    className="text-[25vw] md:text-[20vw] font-black text-black-text tracking-tighter pointer-events-none select-none uppercase leading-none luxury-text"
                 >
                     {content.heroTitle}
                 </motion.h2>
