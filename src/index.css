@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ivory: #F5F5F0;
+  --color-onyx: #050505;
+  --color-gold: #D4AF37;
+
+  --color-black-text: var(--color-onyx);
+  --color-white-text: var(--color-ivory);
+
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+:root {
+  background-color: var(--color-ivory);
+  color: var(--color-onyx);
+}
+
+body {
+  font-family: var(--font-sans);
+  margin: 0;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Utilities for Luxury Feel */
+.luxury-text {
+  font-family: var(--font-serif);
+  letter-spacing: 0.05em;
+}
+
+.fade-in-slow {
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+.bg-noise {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
