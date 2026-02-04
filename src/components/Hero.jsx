@@ -24,7 +24,7 @@ const Hero = () => {
             </div>
 
             {/* Phase 2: Brand Wordmark Emergence (0.4s -> 1.6s) */}
-            <div className="absolute inset-0 flex items-center justify-center z-0 overflow-hidden -mt-40">
+            <div className="absolute inset-0 flex items-center justify-center z-0 overflow-hidden -mt-50 md:-mt-40">
                 <motion.h2
                     initial={{ opacity: 0, scale: 1.15 }}
                     animate={{ opacity: 0.15, scale: 1 }}
@@ -33,14 +33,14 @@ const Hero = () => {
                         ease: [0.22, 1, 0.36, 1], // Closest to power2.out
                         delay: 0.4
                     }}
-                    className="text-7xl md:text-[20vw] font-black text-black-text tracking-tighter pointer-events-none select-none uppercase leading-none luxury-text"
+                    className="text-[25vw] md:text-[20vw] font-black text-black-text tracking-tighter pointer-events-none select-none uppercase leading-none luxury-text"
                 >
                     {content.heroTitle}
                 </motion.h2>
             </div>
 
             {/* Phase 3 & 5: Bottle Descent & Interaction (1.2s -> 3.0s | 3.4s -> 5.2s) */}
-            <div className="relative z-20 flex flex-col items-center mt-20">
+            <div className="relative z-20 flex flex-col items-center mt-12 md:mt-20">
                 <motion.div
                     initial={{ y: -160, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
@@ -48,7 +48,7 @@ const Hero = () => {
                         y: { duration: 1.8, ease: [0.33, 1, 0.68, 1], delay: 1.2 }, // Power3.out style
                         opacity: { duration: 1, delay: 1.2 }
                     }}
-                    className="relative w-[220px] md:w-[400px] aspect-[3/4] flex items-center justify-center"
+                    className="relative w-[500px] md:w-[400px] aspect-[3/4] flex items-center justify-center md:mt-80"
                 >
                     {/* Micro-bounce settle simulation using a separate animation */}
                     <motion.div
@@ -78,7 +78,7 @@ const Hero = () => {
                     transition={{ duration: 1.4, delay: 4.6, ease: "easeOut" }} // Power2.out
                     className="mt-2 text-center"
                 >
-                    <p className="luxury-text text-black-text text-lg md:text-xl tracking-[0.2em] opacity-80 italic">
+                    <p className="luxury-text text-black-text text-base md:text-xl tracking-[0.2em] opacity-80 italic">
                         {content.heroTagline}
                     </p>
                     <motion.div
@@ -96,7 +96,7 @@ const Hero = () => {
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: '100%', opacity: 1 }}
                     transition={{ duration: 2.6, delay: 2.2, ease: "easeInOut" }}
-                    className="relative w-[20px] bg-gradient-to-b from-gold/40 via-onyx/10 to-transparent blur-[2px]"
+                    className="relative w-[12px] md:w-[20px] bg-gradient-to-b from-gold/40 via-onyx/10 to-transparent blur-[2px]"
                 >
                     {/* Idle Breathing Effect (6.5s+) */}
                     <motion.div
