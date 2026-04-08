@@ -9,7 +9,7 @@ const Hero = () => {
     if (!content.showHero) return null;
 
     return (
-        <section className="relative h-screen md:h-[110vh] w-full bg-ivory overflow-hidden flex items-end justify-center pb-12">
+        <section className="relative h-screen md:h-[100vh] lg:h-[110vh] w-full bg-ivory overflow-hidden flex items-end justify-center pb-12">
             {/* Phase 1: Atmospheric Wake-Up (0.0s -> 0.6s) */}
             <motion.div
                 initial={{ opacity: 0 }}

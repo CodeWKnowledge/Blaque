@@ -12,21 +12,21 @@ const AdminContent = () => {
 
     return (
         <div className="max-w-4xl text-black-text">
-            <header className="flex justify-between items-end mb-12">
+            <header className="mb-8 lg:mb-12">
                 <div>
-                    <h1 className="luxury-text text-3xl tracking-widest uppercase mb-2 text-black-text">Interface Control</h1>
+                    <h1 className="luxury-text text-2xl sm:text-3xl tracking-widest uppercase mb-2 text-black-text">Interface Control</h1>
                     <p className="text-[10px] tracking-[0.2em] opacity-40 uppercase text-black-text">Manage Global Content & Sections</p>
                 </div>
             </header>
 
-            <div className="space-y-12">
+            <div className="space-y-8 lg:space-y-12">
                 {/* Section Visibility */}
-                <section className="bg-onyx/[0.03] border border-onyx/5 p-8 rounded-sm shadow-sm">
-                    <h3 className="text-[11px] tracking-[0.3em] uppercase mb-8 opacity-60 flex items-center gap-4 text-black-text">
+                <section className="bg-onyx/[0.03] border border-onyx/5 p-4 sm:p-6 lg:p-8 rounded-sm shadow-sm">
+                    <h3 className="text-[11px] tracking-[0.3em] uppercase mb-6 lg:mb-8 opacity-60 flex items-center gap-4 text-black-text">
                         Visibility Toggle
                         <div className="h-px flex-1 bg-onyx/5"></div>
                     </h3>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
                         {Object.keys(content).filter(k => k.startsWith('show')).map(key => (
                             <label key={key} className="flex flex-col gap-3 cursor-pointer group">
                                 <span className="text-[9px] tracking-[0.2em] uppercase opacity-40 group-hover:opacity-100 transition-opacity text-black-text">
@@ -49,8 +49,8 @@ const AdminContent = () => {
                 </section>
 
                 {/* Text Content */}
-                <section className="bg-onyx/[0.03] border border-onyx/5 p-8 rounded-sm space-y-8 shadow-sm">
-                    <h3 className="text-[11px] tracking-[0.3em] uppercase mb-8 opacity-60 flex items-center gap-4 text-black-text">
+                <section className="bg-onyx/[0.03] border border-onyx/5 p-4 sm:p-6 lg:p-8 rounded-sm space-y-6 lg:space-y-8 shadow-sm">
+                    <h3 className="text-[11px] tracking-[0.3em] uppercase mb-6 lg:mb-8 opacity-60 flex items-center gap-4 text-black-text">
                         Text & Copy
                         <div className="h-px flex-1 bg-onyx/5"></div>
                     </h3>
@@ -90,12 +90,12 @@ const AdminContent = () => {
                     </div>
                 </section>
 
-                <div className="flex gap-4">
-                    <button className="flex-1 py-5 bg-onyx text-white-text text-[10px] tracking-[0.5em] uppercase font-bold hover:bg-gold hover:text-black-text transition-all flex items-center justify-center gap-4">
+                <div className="flex flex-col sm:flex-row gap-3 lg:gap-4">
+                    <button className="flex-1 py-4 lg:py-5 bg-onyx text-white-text text-xs sm:text-[10px] tracking-[0.5em] uppercase font-bold hover:bg-gold hover:text-black-text transition-all flex items-center justify-center gap-4">
                         <Save size={16} /> Save Changes
                     </button>
-                    <button className="px-8 py-5 border border-onyx/10 text-black-text text-[10px] tracking-[0.5em] uppercase hover:bg-onyx/[0.02] transition-all">
-                        <RefreshCw size={16} />
+                    <button className="sm:px-8 py-4 lg:py-5 border border-onyx/10 text-black-text text-xs sm:text-[10px] tracking-[0.5em] uppercase hover:bg-onyx/[0.02] transition-all flex items-center justify-center gap-2">
+                        <RefreshCw size={16} /> <span className="sm:hidden">Reset</span>
                     </button>
                 </div>
             </div>
